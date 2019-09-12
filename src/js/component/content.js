@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "/workspace/react-hello/src/js/component/card";
+import { Card } from "./card.js";
 export const Content = () => {
 	return (
 		<div className="container mt-3">

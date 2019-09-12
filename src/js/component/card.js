@@ -1,6 +1,8 @@
 import React from "react";
+import { Content } from "./content";
+import PropTypes from "prop-types";
 
-export const Card = () => {
+export const Card = props => {
 	return (
 		<div className="card h-100">
 			<img
@@ -10,16 +12,17 @@ export const Card = () => {
 			/>
 			<div className="card-body">
 				<h4 className="card-title">Card title</h4>
-				<p className="card-text">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Sapiente esse necessitatibus neque.
-				</p>
+				<p className="card-text">{props.content}</p>
 			</div>
 			<div className="card-footer">
 				<a href="#" className="btn btn-primary">
-					Find Out More!
+					{props.flor || "Click Alt"}
 				</a>
 			</div>
 		</div>
 	);
+};
+Card.propTypes = {
+	content: PropTypes.string,
+	flor: PropTypes.string
 };
